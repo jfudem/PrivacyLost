@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>LOVEINT: A Game with Love and Intel</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    
+   <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.12/p5.js"></script>-->
+    <!--<script src="p5.js"></script>-->
+
+    <!--<link rel="stylesheet" type="text/css" href="style.css" >-->
+    
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <!--<script src="jquery.min.js"></script>-->
+    <script type="text/javascript" src="data.js"></script>
+    <script type="text/javascript" src="loveint.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="style-color.css" >
+    
+    <script src="https://use.typekit.net/cew2geq.js"></script>
+    <!--<script>try{Typekit.load({ async: true });}catch(e){}</script>-->
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro:400,300,600' rel='stylesheet' type='text/css'>
+
+</head>
+<body>
+    <div id="wrapper" class="clearfix">
+        <!--<audio id="quirky-dog" preload="auto" loop>
+            <source src="assets/quirky-dog.mp3" type="audio/mpeg">
+        </audio>-->
+        <div id="intro-state" class="state" aria-hidden="false">
+            <div>
+                <h1>LOVEINT: A Game of Love and Intel</h1>
+                <button id="begin-game">Begin Game</button>
+            </div>
+        </div>
+        <div id="gender-state" class="state" aria-hidden="true">
+            <div>
+                <h1>LOVEINT: A Game of Love and Intel</h1>
+                <div id="intro-text" class="one-at-a-time" aria-hidden="false">
+                    <div id="current-text" class="content-box" >
+                        <div id="cycle-text"></div>
+                        <button id="back-text" class="back-button" aria-hidden="true">&#60; Back </button>
+                        <button id="next-text" class="next-button" aria-hidden="false">Next ></button>
+                    </div>
+                    <div id="text-reference" aria-hidden="true">
+                        <p>You are an analyst for the NSA.</p>
+                        <p>Your duty is to intercept Facebook Messages from potential terrorists using the PRISM Database.</p>
+                        <p>You are worried your spouse is cheating on you.</p>
+                        <p>Since your boss is away, use the next three days and your security clearance to find out what your spouse is up to behind your back.</p>
+                        <p>Don't Get Caught.</p>
+                    </div>
+                    
+                
+                </div>
+                <br >
+            </div>
+            <div>
+                <div id="gender-form-holder" class="content-box" aria-hidden="true">
+                    <form id="gender-form">
+                        <div id="spousegender">
+                            <label class="jfudem-q-item-label above-select">
+                                <span>
+                                    What do you call your spouse?
+                                </span>
+                            </label>
+                            <select name="spouseGender">
+                                <option value="male">Husband</option>
+                                <option value="female">Wife</option>
+                                <option value="neutral" selected>Partner</option>
+                                <option value="random">Random</option>
+                            </select>
+                        </div>
+                        <div id="yourgender">
+                            <label class="jfudem-q-item-label above-select">
+                                <span>
+                                    What does your spouse call you?
+                                </span>
+                            </label>
+                            <select name="yourGender">
+                                <option value="male">Husband</option>
+                                <option value="female">Wife</option>
+                                <option value="neutral" selected>Partner</option>
+                                <option value="random">Random</option>
+                            </select>
+                        </div>
+                        <div>
+                            <button id="back-from-form" class="back-button" type="button">&#60; Back </button>
+                            <input type="submit" value="Next >">
+                        </div>
+                    </form> 
+                </div>
+            </div>
+            <div>
+                <div id="gender-results" class="content-box blue-content" aria-hidden="true">
+                    <div id="title-holder">
+                        <h3>Review Your Spouse's Infromation:</h3>
+                    </div>
+                    <div id="gender-results-holder">
+                    
+                    </div>
+                    <div>
+                        <button id="back-to-form" class="back-button" aria-hidden="true">&#60; Back </button>
+                        <button id="start-work" class="next-button" aria-hidden="false">Start Spying ></button>
+                    </div>
+                </div>    
+            </div>
+        </div>    
+        <div id="work-state" class="state" aria-hidden="true">
+            <header>
+                <div id="primary-nav" class="clearfix">
+                    <div id="top-secret">
+                        <h1>
+                            TOP SECRET//SI//ORCON//NOFORN
+                        </h1>
+                    </div>
+                    <nav>
+                        <h2>
+                            Day: <span id="day"></span> Free Peeks: <span id="peeks"></span> <span id="risk-text">Risk of Firing:</span> <span id="firechance">0%</span>
+                        </h2>
+                    </nav>
+                </div>
+                <div id="database" class="clearfix">
+                    <ul>
+                        <li id="userlookup">
+                            <h3 class="above-select">
+                                View Messages From:
+                            </h3>
+                            <select id="lookedUpUserHolder">
+                            </select>
+                        </li>
+                        <li>
+                            <h3>
+                                UserID:
+                            </h3>
+                            <select id="userIDHolder">
+                            </select>
+                        </li>
+                        <li class="deemphasized">
+                            <h3 class="above-select">
+                                Database:
+                            </h3>
+                            <select disabled>
+                                <option value="PRISM">
+                                    PRISM
+                                </option>
+                            </select>
+                        </li>
+                        <li class="deemphasized">
+                            <h3 class="above-select">
+                                Provider:
+                            </h3>
+                            <select disabled>
+                                <option value="FACEBOOK">
+                                    FACEBOOK
+                                </option>
+                            </select>
+                        </li>
+                        <li>
+                            <button id="clock-out">Clock Out</button>
+                        </li>
+
+
+                    </ul>
+                </div>
+            </header>
+            <div id="content" class="clearfix">
+                <aside>
+                    <div id="aside-header" class="table-header">
+                        <!--METADATA: CONVERSATION VIEW-->
+                        Conversation Metadata
+                    </div>
+                    <div id="aside-content" class="table-content">
+                        <ul id="asideul">
+                            <!--<li>
+                                <h5>Recipient UserID: FB96233;</h5>
+                                <p>X-Recieved-BY: FB44271; X-Recieved-ON: 6/10/2015+ 7:02:04+0000 UTC;</p>
+                            </li>-->
+
+                        </ul>
+                    </div>
+                </aside>
+                <main>
+                    <div id="main-header" class="table-header">
+                        <!--METADATA: MESSAGE VIEW--->
+                        Message Metadata
+                    </div>
+                    <div id="main-content" class="table-content">
+                        <div id="main-view-button-holder">
+                        </div>
+                        <!--
+                        <div id="background-info" class="content-box" aria-hidden="true">
+                            <div>
+                                <span class="field-prompt">First: </span>
+                                <span id="field-firstName" class="field-response">Jonathan</span>
+                                <span class="field-prompt">Last: </span>
+                                <span id="field-lastName" class="field-response">Fudem</span>
+                            </div>
+                            <div>
+                                <span class="field-prompt">Facebook Account #: </span>
+                                <span id="field-facebookAccountNumber" class="field-response">FB12345</span>
+                            </div>
+                            <div>
+                                <span class="field-prompt">Occupation: </span>
+                                <span id="field-occupation" class="field-response">Student</span>
+                            </div>
+                            <div>
+                                <span class="field-prompt">Employer: </span>
+                                <span id="field-employer" class="field-response">University of Southern California</span>
+                            </div>
+                            <div>
+                                <span class="field-prompt">Criminal Record: </span>
+                                <span id="field-criminalRecord" class="field-response">N/A</span>
+                            </div>    
+                        </div>
+                        -->
+                        <ul id="results-holder">
+
+                        </ul>
+                    </div>
+                </main>
+            </div>
+            <div id="tutorial" aria-hidden="true">
+                <div id="tut-intro" class="tutorial-frame content-box" aria-hidden="true">
+                
+                </div>
+            
+            </div>
+        </div>
+        <div id="home-state" class="state" aria-hidden="true">
+            <div class="clearfix"><!-- header -->
+                <nav class="clearfix">
+                    <h2>
+                        <button id="go-to-work">Go To Work</button>
+                    </h2>
+                </nav>
+            </div>
+            <div id="confrontation-container">
+                <div id="confrontation-prompt">
+
+                </div>
+                <div id="confrontation-response">
+
+                </div>
+            </div>
+        </div>
+        <div id="end-state" class="state" aria-hidden="true">
+            <div id="fired" class="content-box">
+                <h1>Notice of Failure</h1>
+                <p>Your unauthorized use of the PRISM database has raised too many red flags.</p>
+                <p>Your boss has discovered your transgressions.</p>
+                <p>You are a disgrace to the national security industry.</p>
+                <p>Your employment is henceforce terminated immediately.</p>
+                <p>Have fun explaining this to your spouse.</p>
+                <div>
+                    <button id="new-game">Play Again</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</body>

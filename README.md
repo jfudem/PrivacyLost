@@ -1,12 +1,10 @@
 # Privacy Lost: Owning Our Data In Digital Culture
 
-## A Game Based Media Research Thesis by Jonathan Fudem
+### A Game Based Media Research Thesis by Jonathan Fudem
 [jonathanfudem.com/thesis.html](jonathanfudem.com/thesis.html) 
 
 ##Process Video
 [https://vimeo.com/149292232](https://vimeo.com/149292232) 
-
----
 
 ## Abstract
 Every time you send a text, read an email, open Facebook, or make an online purchase, you must consider who else might have access to your personal information. Often, the answer is quite alarming.

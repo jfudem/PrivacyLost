@@ -5,7 +5,7 @@
 
 
 ##Process Video
-[https://vimeo.com/149292232](https://vimeo.com/149292232) 
+*[https://vimeo.com/149292232](https://vimeo.com/149292232)*
 
 ## Abstract
 Every time you send a text, read an email, open Facebook, or make an online purchase, you must consider who else might have access to your personal information. Often, the answer is quite alarming.
@@ -19,6 +19,6 @@ Privacy, the protection of our personal and sometimes secret relationships, comm
 ###LOVEINT: A Game of Love and Intel
 LOVEINT is a US security jargon term for the personal use of intelligence surveillance tools to spy on romantic interests. There is no exact data about how widespread LOVEINT is, but CNN, Reuters, Edward Snowden, NSA representatives and members of Congress all agree that the practice exists, and that jealous analysts are in fact caught snooping. Inspired by the award-winning indie game Papers Please, LOVEINT: A Game of Love and Intel, places you, the player, in the seat of a suspicious NSA researcher with too much time on his/her hands. Players have access to simulated copies of real NSA databases like PRISM, Tempora, XKeyscore and corporate backends that can be used to cyber-stalk US citizens. Can you gather enough intelligence to determine if your lover is cheating on you before being caught by your government supervisor? Play LOVEINT: A Game of Love and Intel and find out! The game is fully-operational, featuring all original content and coding. I have created a backstory, a written script, and a 3000-line javascript database, forming the infrastructure for an exciting and engaging game experience. The format and execution are created to be easy to update and expand, as I continue my research.
 
-[Play LOVEINT](jonathanfudem.com/specialprojects/loveint/) 
+*[Play LOVEINT](jonathanfudem.com/specialprojects/loveint/)*
 
 

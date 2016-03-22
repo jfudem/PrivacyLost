@@ -3,6 +3,7 @@
 ### A Game Based Media Research Thesis by Jonathan Fudem
 [jonathanfudem.com/thesis.html](jonathanfudem.com/thesis.html) 
 
+
 ##Process Video
 [https://vimeo.com/149292232](https://vimeo.com/149292232) 
 
